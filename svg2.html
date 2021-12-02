@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>svg-2</title>
+    <link rel="stylesheet" href="src/css/select.css" />
+    <link rel="stylesheet" href="src/css/index.css" />
+    <script src="./node_modules/svg.js/dist/svg.js"></script>
+    <script src="./node_modules/svg.select.js/dist/svg.select.js"></script>
+    <script src="./node_modules/svg.resize.js/dist/svg.resize.js"></script>
+    <script src="./src/plugin/svg.draggable.js-2.2.2/src/svg.draggable.js"></script>
+  </head>
+
+  <body>
+    <div id="canvas"></div>
+    <script>
+      var poly = new SVG('canvas')
+        .size('100%', '100%')
+        .polygon('350,50 283,250 450,122 250,122 416,250')
+        .selectize({ saveAspectRatio: true })
+        .resize({ saveAspectRatio: true })
+        .draggable()
+      // .selectize({ deepSelect: true })
+      // .resize()
+
+      // window.addEventListener(
+      //   'keydown',
+      //   function (e) {
+      //     if (e.keyCode == 17) {
+      //       poly.resize({
+      //         // snapToGrid: 20,
+      //         // snapToAngle: 15,
+      //         saveAspectRatio: true,
+      //       })
+      //     }
+      //   },
+      //   false,
+      // )
+
+      // window.addEventListener(
+      //   'keyup',
+      //   function (e) {
+      //     if (e.keyCode == 17) {
+      //       // poly.resize({ snapToGrid: 1, snapToAngle: 0.1 })
+      //     }
+      //   },
+      //   false,
+      // )
+    </script>
+  </body>
+</html>
